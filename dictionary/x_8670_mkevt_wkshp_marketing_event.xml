@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Marketing Event" max_length="40" name="x_8670_mkevt_wkshp_marketing_event" type="collection">
+        <element display="true" label="Budget" max_length="20" name="budget" type="currency"/>
+        <element label="Company" max_length="32" name="company" reference="core_company" type="reference"/>
+        <element label="End date" max_length="40" name="end_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Event Type" max_length="40" name="event_type" type="string">
+            <choice/>
+        </element>
+        <element label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Name" max_length="40" name="name" type="string"/>
+        <element label="Start date" max_length="40" name="start_date" type="glide_date"/>
+        <index name="index">
+            <element name="company"/>
+        </index>
+        <index name="index2">
+            <element name="location"/>
+        </index>
+    </element>
+</database>
